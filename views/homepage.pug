@@ -1,0 +1,24 @@
+//- Homepage Pug Template - homepage.pug
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+
+    a(href='/update-cobj') Add to this table
+
+    table
+      thead
+        tr
+          th Name
+          th Species
+          th Breed
+      tbody
+        each pet in customObjects
+          tr
+            td= pet.properties.name
+            td= pet.properties.species
+            td= pet.properties.breed
